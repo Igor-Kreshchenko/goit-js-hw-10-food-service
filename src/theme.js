@@ -11,23 +11,23 @@ bodyRef.classList.add(Theme.LIGHT);
 themeSwitcherRef.addEventListener('change', onSwitcherClick);
 saveDarkTheme();
 
-function toDarkTheme() {
+function setDarkTheme() {
   bodyRef.classList.replace(Theme.LIGHT, Theme.DARK);
 }
 
-function toLightTheme() {
+function setLightTheme() {
   bodyRef.classList.replace(Theme.DARK, Theme.LIGHT);
 }
 
 function onSwitcherClick() {
   if (themeSwitcherRef.checked) {
-    toDarkTheme();
+    setDarkTheme();
     localStorage.setItem('theme', Theme.DARK);
     return;
   }
 
-  toLightTheme();
-  localStorage.setItem('theme', Theme.LIGHT);
+  setLightTheme();
+  localStorage.clear();
 }
 
 function saveDarkTheme() {
@@ -35,6 +35,6 @@ function saveDarkTheme() {
 
   if (savedTheme === Theme.DARK) {
     themeSwitcherRef.checked = true;
-    toDarkTheme();
+    setDarkTheme();
   }
 }
