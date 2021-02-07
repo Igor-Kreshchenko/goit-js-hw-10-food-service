@@ -2345,19 +2345,19 @@ module.exports = [{
   "price": 240,
   "ingredients": ["Круглый рис", "Мини цукини", "Тертый имбирь", "Грибы шиитаке", "Соевый соус", "Кунжутное масло"]
 }];
-},{}],"menu.js":[function(require,module,exports) {
+},{}],"js/menu.js":[function(require,module,exports) {
 "use strict";
 
-var _menuItem = _interopRequireDefault(require("./template/menu-item"));
+var _menuItem = _interopRequireDefault(require("../template/menu-item"));
 
-var _menu = _interopRequireDefault(require("./menu.json"));
+var _menu = _interopRequireDefault(require("../menu.json"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 var menuListRef = document.querySelector('.js-menu');
 var allMenuItems = (0, _menuItem.default)(_menu.default);
 menuListRef.insertAdjacentHTML('beforeend', allMenuItems);
-},{"./template/menu-item":"template/menu-item.hbs","./menu.json":"menu.json"}],"theme.js":[function(require,module,exports) {
+},{"../template/menu-item":"template/menu-item.hbs","../menu.json":"menu.json"}],"js/theme.js":[function(require,module,exports) {
 var Theme = {
   LIGHT: 'light-theme',
   DARK: 'dark-theme'
@@ -2398,10 +2398,10 @@ function saveDarkTheme() {
 },{}],"index.js":[function(require,module,exports) {
 "use strict";
 
-require("./menu");
+require("./js/menu");
 
-require("./theme");
-},{"./menu":"menu.js","./theme":"theme.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+require("./js/theme");
+},{"./js/menu":"js/menu.js","./js/theme":"js/theme.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -2429,7 +2429,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1627" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1825" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
