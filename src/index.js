@@ -1,2 +1,2 @@
-import './menu';
-import './theme';
+import './js/menu';
+import './js/theme';

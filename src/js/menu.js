@@ -1,5 +1,5 @@
-import templateFunction from './template/menu-item';
-import dishes from './menu.json';
+import templateFunction from '../template/menu-item';
+import dishes from '../menu.json';
 
 const menuListRef = document.querySelector('.js-menu');
 
