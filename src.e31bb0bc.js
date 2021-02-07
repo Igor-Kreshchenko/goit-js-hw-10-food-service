@@ -2384,13 +2384,13 @@ function onSwitcherClick() {
   }
 
   setLightTheme();
-  localStorage.clear();
+  localStorage.removeItem('theme');
 }
 
 function saveDarkTheme() {
   var savedTheme = localStorage.getItem('theme');
 
-  if (savedTheme === Theme.DARK) {
+  if (savedTheme) {
     themeSwitcherRef.checked = true;
     setDarkTheme();
   }
@@ -2429,7 +2429,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "1825" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "2124" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};
