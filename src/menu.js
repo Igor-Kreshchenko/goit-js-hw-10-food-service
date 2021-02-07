@@ -3,10 +3,6 @@ import dishes from './menu.json';
 
 const menuListRef = document.querySelector('.js-menu');
 
-function createMenuItemsList(dishes) {
-  return templateFunction(dishes);
-}
-
-const allMenuItems = createMenuItemsList(dishes);
+const allMenuItems = templateFunction(dishes);
 
 menuListRef.insertAdjacentHTML('beforeend', allMenuItems);
