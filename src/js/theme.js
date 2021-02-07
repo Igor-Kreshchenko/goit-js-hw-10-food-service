@@ -27,13 +27,13 @@ function onSwitcherClick() {
   }
 
   setLightTheme();
-  localStorage.clear();
+  localStorage.removeItem('theme');
 }
 
 function saveDarkTheme() {
   const savedTheme = localStorage.getItem('theme');
 
-  if (savedTheme === Theme.DARK) {
+  if (savedTheme) {
     themeSwitcherRef.checked = true;
     setDarkTheme();
   }
